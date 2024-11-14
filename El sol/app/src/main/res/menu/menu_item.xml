@@ -1,19 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item android:title="Renombrar"
         android:id="@+id/rename"
+        app:showAsAction="never"
         />
     <item android:title="Copiar"
         android:id="@+id/copy"
+        app:showAsAction="never"
         />
     <item android:title="Cortar"
         android:id="@+id/cut"
+        app:showAsAction="never"
         />
     <item android:title="Eliminar"
         android:id="@+id/delete"
+        app:showAsAction="never"
         />
     <item android:title="Mover"
         android:id="@+id/move"
+        app:showAsAction="never"
         />
 </menu>

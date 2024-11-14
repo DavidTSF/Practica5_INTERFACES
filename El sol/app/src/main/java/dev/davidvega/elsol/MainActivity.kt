@@ -56,8 +56,11 @@ class MainActivity : AppCompatActivity() {
                 val resource = dataSet.get(position)
                 holder.itemLayout.setBackgroundResource(resource.imageViewId)
                 holder.textView.text = resource.nombre
-                holder.toolbar.inflateMenu(R.menu.menu_item)
 
+
+                if ( holder.toolbar.menu.size() == 0) {
+                    holder.toolbar.inflateMenu(R.menu.menu_item)
+                }
                 holder.toolbar.setOnMenuItemClickListener {
                     println( "Clickado $position!" )
                     when (it.itemId) {
@@ -67,6 +70,7 @@ class MainActivity : AppCompatActivity() {
                             dataSet.add( position + 1, copia )
                             notifyItemInserted(position+1 )
                             notifyDataSetChanged()
+
 
                         }
                         R.id.delete -> {
