@@ -1,5 +1,6 @@
 package dev.davidvega.elsol
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.Menu
@@ -30,6 +31,20 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        val x = findViewById(R.id.my_toolbar) as Toolbar
+        x.inflateMenu(R.menu.menu_main)
+        x.setOnMenuItemClickListener{
+            when (it.itemId) {
+                R.id.comparePlanets -> {
+                    changeToComparePlanets()
+                true
+                }
+
+                else -> {false}
+            }
+        }
+
 
 
         val recyclerView: RecyclerView = findViewById(R.id.recyclerView)
@@ -62,7 +77,6 @@ class MainActivity : AppCompatActivity() {
                     holder.toolbar.inflateMenu(R.menu.menu_item)
                 }
                 holder.toolbar.setOnMenuItemClickListener {
-                    println( "Clickado $position!" )
                     when (it.itemId) {
                         R.id.copy -> {
                             val originalItem: Planeta  = dataSet[position]
@@ -91,4 +105,12 @@ class MainActivity : AppCompatActivity() {
         val toolbar: Toolbar = itemView.findViewById(R.id.itemToolbar)
         val textView: TextView = itemView.findViewById(R.id.textoCard)
     }
+
+    fun changeToComparePlanets() {
+        val i = Intent(this, CompararPlanetas::class.java)
+        startActivity(i);
+    }
+
+
 }
+
