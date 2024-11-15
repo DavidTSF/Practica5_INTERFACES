@@ -57,11 +57,20 @@
                 android:background="#a702fe"
                 android:layout_height="25dp"
                 android:layout_weight="1">
+
+
                 <AutoCompleteTextView
-                    android:layout_width="0dp"
+                    android:id="@+id/autocomplete_izq"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:backgroundTint="@android:color/transparent"
-                    />
+                    android:background="@android:color/transparent"
+                    android:completionThreshold="1"
+                    android:gravity="center"
+                    android:inputType="text"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+
             </FrameLayout>
 
             <FrameLayout
@@ -70,9 +79,15 @@
                 android:layout_marginHorizontal="10dp"
                 android:layout_weight="1">
                 <AutoCompleteTextView
-                    android:layout_width="0dp"
+                    android:id="@+id/autocomplete_der"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:backgroundTint="@android:color/transparent"
+                    android:background="@android:color/transparent"
+                    android:completionThreshold="1"
+                    android:gravity="center"
+                    android:inputType="text"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
                     />
             </FrameLayout>
         </TableRow>
@@ -88,6 +103,8 @@
             android:layout_height="match_parent"
             android:weightSum="2">
             <TextView
+                android:textColor="@color/black"
+                android:gravity="center"
                 android:id="@+id/diametro_izq"
                 android:layout_weight="1"
                 android:layout_width="0dp"
@@ -96,6 +113,8 @@
                 />
             <TextView
                 android:id="@+id/diametro_der"
+                android:textColor="@color/black"
+                android:gravity="center"
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -114,6 +133,8 @@
             android:weightSum="2">
             <TextView
                 android:id="@+id/distanciasol_izq"
+                android:textColor="@color/black"
+                android:gravity="center"
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -121,6 +142,8 @@
                 />
             <TextView
                 android:id="@+id/distanciasol_der"
+                android:textColor="@color/black"
+                android:gravity="center"
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -139,6 +162,8 @@
             android:weightSum="2">
             <TextView
                 android:id="@+id/densidad_izq"
+                android:textColor="@color/black"
+                android:gravity="center"
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -146,6 +171,8 @@
                 />
             <TextView
                 android:id="@+id/densidad_der"
+                android:textColor="@color/black"
+                android:gravity="center"
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
